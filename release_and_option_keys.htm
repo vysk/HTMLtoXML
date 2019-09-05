@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Ordering and Entering <MadCap:conditionalText MadCap:conditions="output.withheld">Release and </MadCap:conditionalText>Option Keys</h1>
+        <p>After the <MadCap:variable name="LocalVariables.ProductShortname" /> ova has been deployed as a Guest on the VM Host, and you have set the <i>root</i> and <i>admin</i> passwords, you can access the <MadCap:variable name="LocalVariables.ProductShortname" /> through a web browser<MadCap:conditionalText MadCap:conditions="output.withheld"> and order your release key</MadCap:conditionalText>.</p>
+        
+
+        <h2 class="task_number" MadCap:autonum="Task 1: "> Order the Keys</h2>
+        <ol>
+            <li>Log in to  the <MadCap:variable name="LocalVariables.ProductShortname" /> via a web browser as <i>admin</i>.</li>
+            <li MadCap:conditions="family.VCS">
+                <p>Follow the service setup wizard to define the purpose of the system, apply the<MadCap:conditionalText MadCap:conditions="output.withheld"> release and</MadCap:conditionalText> options keys, then restart the system.</p>
+                <p>The wizard helps you through the configuration described in the rest of this topic, so you can ignore the rest of the topic if you are using the wizard.</p>
+                <p>If you do not want the wizard to guide you, click <span class="button_name">Skip Service Setup Wizard</span>, then follow the rest of these instructions.</p>
+            </li>
+            <li MadCap:conditions="family.VCS">Get<MadCap:conditionalText MadCap:conditions="output.withheld"> release and </MadCap:conditionalText>option keys:<ol><li>Go to the <span class="page_name">Option keys</span> page (<span class="page_navigation">Maintenance &gt; Option keys</span>).</li><li>Copy the <span class="field_name">Serial number</span>.</li><li><p>Use this serial number to order <MadCap:conditionalText MadCap:conditions="output.withheld">release and</MadCap:conditionalText> option keys for this VM <MadCap:variable name="LocalVariables.ProductShortname" />.</p><p>For full details on obtaining your <MadCap:conditionalText MadCap:conditions="output.withheld">release and</MadCap:conditionalText> option keys, see <MadCap:xref href="vm_release process.htm" target="" title="" alt="">Appendix 2: VM&#160;New Product Hold&#160;(NPH) release process [p.1]</MadCap:xref>.</p></li></ol></li>
+            <li MadCap:conditions="family.Conductor">Get release key:<ol><li>Go to the <span class="page_name">Option keys</span> page (<span class="page_navigation">Maintenance &gt; Option keys</span>).</li><li><p>Copy the <span class="field_name">Serial number</span>.</p><p MadCap:conditions="output.withheld">[OF:&#160;changed this from "Hardware serial number, i presumed like VCS/Expressway that conductor now just labels the field Serial number]</p></li><li><p>Use this serial number to order a release key for this VM <MadCap:variable name="LocalVariables.ProductShortname"></MadCap:variable>.</p><p>For full details on obtaining your release key, see <MadCap:xref href="vm_release process.htm" target="" title="" alt="">Appendix 2: VM&#160;New Product Hold&#160;(NPH) release process [p.1]</MadCap:xref>.</p></li></ol></li>
+        </ol>
+        <h2 class="task_number" MadCap:autonum="Task 2: "> Apply the Keys to the System</h2>
+        <p>When you have the <MadCap:conditionalText MadCap:conditions="output.withheld">release and</MadCap:conditionalText> option keys:</p>
+        <ol>
+            <li>Log in to  the <MadCap:variable name="LocalVariables.ProductShortname" /> via a web browser as <i>admin</i>.</li>
+            <li>Enter the <MadCap:conditionalText MadCap:conditions="vcs_local.brand_vcs,output.withheld">release and</MadCap:conditionalText> option keys:<ol><li MadCap:conditions="">Go to the <span class="page_name">Option keys</span> page (<span class="page_navigation">Maintenance &gt; Option keys</span>).</li><li MadCap:conditions="output.withheld">Enter the release key provided in the <span class="field_name">Release key</span> field.</li><li MadCap:conditions="output.withheld">Click <span class="field_name">Set release key</span>.</li><li MadCap:conditions="">For each option key provided, enter the key value in the <span class="field_name">Add option key</span> field and click <span class="button_name">Add option</span>.</li></ol></li>
+            <li>Reboot the <MadCap:variable name="LocalVariables.ProductShortname"></MadCap:variable> to activate the licenses:<ol><li MadCap:conditions="">Go to the <span class="page_name">Restart options</span> page (<span class="page_navigation">Maintenance &gt; Restart options</span>).</li><li MadCap:conditions="">Click <span class="button_name">Reboot</span>.</li></ol></li>
+            <li MadCap:conditions="">
+                <p MadCap:conditions="family.VCS">After the reboot, log in to the web interface and configure the <MadCap:variable name="LocalVariables.ProductShortname" />, including  DNS, NTP, zones, search rules and so on as required.</p>
+                <p MadCap:conditions="family.Conductor">After the reboot, log in to the web interface and configure the <MadCap:variable name="LocalVariables.ProductShortname"></MadCap:variable>, including changing any default passwords, configuring DNS, NTP, conference configuration settings and so on as required.</p>
+                <p MadCap:conditions="family.VCS">	Follow the <a href="http://www.cisco.com/en/US/products/ps13435/products_installation_and_configuration_guides_list.html">Basic Configuration Deployment Guide</a> to guide you through configuring this VM <MadCap:variable name="LocalVariables.ProductShortname" /> ready for operation.</p>
+                <p>
+                    <MadCap:conditionalText MadCap:conditions="family.Conductor">Follow the relevant <a href="http://www.cisco.com/en/US/products/ps11775/products_installation_and_configuration_guides_list.html">Cisco TelePresence Conductor&#160;Deployment Guide</a> to guide you through configuring this VM <MadCap:variable name="call_control.ConductorShort"></MadCap:variable>&#160;ready for operation.</MadCap:conditionalText>
+                </p>
+            </li>
+            <li MadCap:conditions="">
+                <p>After the <MadCap:variable name="LocalVariables.ProductShortname" /> has been configured it is good practice to backup the <MadCap:variable name="LocalVariables.ProductShortname" /> configuration using the <MadCap:variable name="LocalVariables.ProductShortname" /> backup facility (see next section).</p>
+                <p MadCap:conditions="output.withheld">[OF:&#160;witholding until we get to the truth ojn this]The snapshot is important as it can be used to restore a VM should it become damaged – the snapshot retains the existing license keys. If the VM is re-installed instead of being restored, new license keys would be required.</p>
+            </li>
+        </ol>
+    </body>
+</html>
